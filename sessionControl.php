@@ -33,3 +33,12 @@ function unsetSe(){
         );
     }
 };
+
+function checkSession() {
+    session_start();
+    if(isset($_SESSION["user"])){
+        echo "Is Set";
+    } else {
+        echo "It is not set";
+    }
+};
