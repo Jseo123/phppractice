@@ -42,3 +42,10 @@ function checkSession() {
         echo "It is not set";
     }
 };
+
+function redirect(){
+    session_start();
+    if(empty($_SESSION["user"])){
+        header("Location: http://localhost/phppractice/index.php");
+    }
+};
