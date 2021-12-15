@@ -1,20 +1,18 @@
 <?php
 
+$username = "Jseo123";
+$password = "123456";
+
 function login(){
     session_start();
     $_SESSION["user"] = $_POST["fuser"];
 $_SESSION["pass"] = $_POST["pass"];
-$username = "Jseo123";
-$password = "123456";
-
-
 
     if ($_SESSION["user"] === $username && $password === $_SESSION["pass"]){
         header("Location: http://localhost/phppractice/dashboard.php ");
     } else {
         header("Location: http://localhost/phppractice/index.php");
     }
-    
 };
 
 function destroyLogin(){
@@ -47,12 +45,5 @@ function redirect(){
     session_start();
     if(empty($_SESSION["user"])){
         header("Location: http://localhost/phppractice/index.php");
-    }
-};
-
-function indexRedirect(){
-    session_start();
-    if(isset($_SESSION["user"])){
-        header("Location: http://localhost/phppractice/dashboard.php ");
     }
 };
