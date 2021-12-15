@@ -49,3 +49,10 @@ function redirect(){
         header("Location: http://localhost/phppractice/index.php");
     }
 };
+
+function indexRedirect(){
+    session_start();
+    if(isset($_SESSION["user"])){
+        header("Location: http://localhost/phppractice/dashboard.php ");
+    }
+};
