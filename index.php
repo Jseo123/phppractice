@@ -6,7 +6,7 @@
 <title>A Basic HTML5 Template</title>
 </head>
 <body>
-<form action="functions.php" method="POST">
+<form action="login.php" method="POST">
 <label for="fuser">First name:</label><br>
 <input type="text" id="fuser" name="fuser"><br>
 <label for="pass">Password:</label><br>
