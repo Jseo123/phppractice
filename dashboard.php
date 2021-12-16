@@ -6,7 +6,7 @@
 <title>A Basic HTML5 Template</title>
 </head>
 <body>
-    <?php 
+     <?php 
     require_once "sessionControl.php";
     redirect();
     ?>

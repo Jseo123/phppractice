@@ -6,6 +6,12 @@
 <title>A Basic HTML5 Template</title>
 </head>
 <body>
+    <?php require_once "sessionControl.php";
+    session_start();
+    if(isset($_SESSION["user"])){
+        header("Location: dashboard.php");
+    }
+    ?>
 <form action="login.php" method="POST">
 <label for="fuser">First name:</label><br>
 <input type="text" id="fuser" name="fuser"><br>

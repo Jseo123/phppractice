@@ -1,17 +1,24 @@
 <?php
-
-$username = "Jseo123";
-$password = "123456";
+  define("username", "Jseo123");
+  define("password", "123456");
 
 function login(){
     session_start();
+
+
     $_SESSION["user"] = $_POST["fuser"];
 $_SESSION["pass"] = $_POST["pass"];
 
-    if ($_SESSION["user"] === $username && $password === $_SESSION["pass"]){
-        header("Location: http://localhost/phppractice/dashboard.php ");
+echo $_SESSION["user"];
+echo username;
+
+    if ($_SESSION["user"] === username && password == $_SESSION["pass"]){
+    header("Location: http://localhost/phppractice/dashboard.php ");
+    
     } else {
         header("Location: http://localhost/phppractice/index.php");
+        
+     
     }
 };
 
@@ -43,7 +50,7 @@ function checkSession() {
 
 function redirect(){
     session_start();
-    if(empty($_SESSION["user"])){
+    if(!isset($_SESSION["user"])){
         header("Location: http://localhost/phppractice/index.php");
     }
 };
